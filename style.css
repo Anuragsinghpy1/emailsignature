@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* text-transform: capitalize; */
+  font-family: Nunito, sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #d3dde6; */
+}
+
+.container .email-signature {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  /* background: #222; */
+  /* background: rgba(242, 245, 250, 0.452); */
+  background: #f0f0f0;
+  border: 1px solid #f2f5fa;
+  border-radius: 10px;
+  padding: 10px 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: -1px 5px 9px -3px rgba(0, 0, 0, 0.83);
+  -webkit-box-shadow: -1px 5px 9px -3px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: -1px 5px 9px -3px rgba(0, 0, 0, 0.83);
+}
+
+.container .email-signature .image img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 5px #333;
+  position: relative;
+}
+
+.container .email-signature .image::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  right: 72%;
+  height: 300px;
+  width: 300px;
+  background: #f0f0f0;
+  border-radius: 0%;
+  box-shadow: 5px 0 0 #00acee;
+}
+.container .email-signature .content {
+  padding-left: 46px;
+}
+.container .email-signature .content .name {
+  padding-left: 8px;
+  font-size: 21px;
+  color: #272727;
+}
+.container .email-signature .content .post {
+  width: 95px;
+  font-size: 12px;
+  padding: 7px 5px;
+  margin: 7px 5px;
+  /* border-radius: 50px;
+    background: #ccc; */
+  color: #ccc;
+  /* text-align: center; */
+}
+
+.container .email-signature .content .contact {
+  margin-top: 10px;
+}
+
+.container .email-signature .content .contact li {
+  list-style-type: none;
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  /* letter-spacing: 2px; */
+}
+
+.container .email-signature .content .contact li i {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  background: #00acee;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.container .email-signature .content .icons {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-flow: column;
+}
+
+.container .email-signature .content .icons a {
+  text-decoration: none;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #00acee;
+  color: #fff;
+  border-radius: 50%;
+  margin: 5px 0;
+}
+
+@media (max-width: 786px) {
+  .container .email-signature {
+    flex-flow: column;
+    width: 90%;
+  }
+  .container .email-signature .image::before {
+    width: 100%;
+    box-shadow: 0 15px 0 #00acee;
+    top: -117px;
+    left: 0;
+  }
+  .container .email-signature .content .name {
+    margin-right: 88px;
+  }
+  .container .email-signature .content .post {
+    margin-left: 46px;
+  }
+  .container .email-signature .content {
+    width: 100%;
+    text-align: center;
+    margin-left: 62px;
+    padding: 50px 0;
+  }
+  .container .email-signature .content li {
+    text-align: left;
+  }
+  .container .email-signature .content .icons {
+    top: 93%;
+    right: 0;
+    width: 100%;
+    flex-flow: row;
+    justify-content: center;
+  }
+  .container .email-signature .content .icons a {
+    margin: 0 5px;
+  }
+}
